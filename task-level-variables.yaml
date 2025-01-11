@@ -7,10 +7,13 @@
    learner: dhanush
   tasks:
   - name: accessing task level variables
+    vars:
+      course: ansible #task level variable which is confined to this task only
     ansible.builtin.debug:
      msg: the course is "{{ course }}" and the duration is "{{ duration }}" and the learner is "{{ learner }}"
-     vars:
-      course: ansible #task level variable which is confined to this task only
-  - name: accesing the variables
+    
+
+
+  - name: accessing the variables
     ansible.builtin.debug:
      msg: the course is "{{ course }}" and the duration is "{{ duration }}" and the learner is "{{ learner }}"
