@@ -1,0 +1,10 @@
+- name: variables
+  hosts: local
+  var:
+      course: "Devops with AWS"
+      learner: Dhanush
+  tasks:
+  - name: print the value
+    ansible.builtin.debug:
+    msg: the "{{ course }}" is leaning by "{{ learner }}"
+    
