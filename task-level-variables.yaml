@@ -1,6 +1,5 @@
 - name: accessing the task level variables
   hosts: local
-  collection: local
   vars:
    course: "devops with aws"
    duration: 120
