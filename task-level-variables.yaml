@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   course: "devops with aws"
+   course: "devops with aws" #global variables play level variables
    duration: 120
    learner: dhanush
   tasks:
@@ -10,10 +10,19 @@
     vars:
       course: ansible #task level variable which is confined to this task only
     ansible.builtin.debug:
-     msg: the course is "{{ course }}" and the duration is "{{ duration }}" and the learner is "{{ learner }}"
+     msg: the course is {{ course }} and the duration is {{ duration }} and the learner is {{ learner }}
     
 
 
-  - name: accessing the variables
+  - name: accessing the the task level variables
+    vars: 
+     course: terraform
+     duration: 15hrs
+     learner: dhanush
     ansible.builtin.debug:
-     msg: the course is "{{ course }}" and the duration is "{{ duration }}" and the learner is "{{ learner }}"
+     msg: the course is {{ course }} and the duration is {{ duration }} and the learner is {{ learner }}
+
+  - name: override by global variables
+    ansible.builtin.debug:
+     msg: the course is {{ course }} and the duration is {{ duration }} and the learner is {{ learner }}
+
