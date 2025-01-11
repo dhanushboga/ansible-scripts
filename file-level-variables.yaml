@@ -1,7 +1,7 @@
 - name: accessing the file level variables
   hosts: local
   connection: local
-  vars:
+  vars_files:
    - file_variables.yaml #accesing the variable from this file
   tasks:
   - name : accessing the values from file_variables.yaml
