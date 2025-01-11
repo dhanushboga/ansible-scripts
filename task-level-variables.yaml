@@ -18,7 +18,7 @@
     vars: 
      course: terraform
      duration: 15hrs
-     learner: dhanush
+     learner: suresh
     ansible.builtin.debug:
      msg: the course is {{ course }} and the duration is {{ duration }} and the learner is {{ learner }}
 
