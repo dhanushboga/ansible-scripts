@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   file_variables.yaml #accesing the variable from this file
+   - file_variables.yaml #accesing the variable from this file
   tasks:
   - name : accessing the values from file_variables.yaml
     ansible.builtin.debug:
