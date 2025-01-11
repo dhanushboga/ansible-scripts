@@ -12,8 +12,8 @@
 
   - name: learner
     prompt: Enter the learner name
-    private: false
-    
+   
+
   tasks:
   - name: the information below
     ansible.builtin.debug:
