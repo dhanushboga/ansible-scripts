@@ -5,3 +5,15 @@
   - name: print the variables
     ansible.builtin.debug:
      msg: the course is {{ COURSE }} and the Duration is {{ DURATION }} and the Trainer is {{ TRAINER }} and finally the learner is {{ LEARNER }}
+
+
+
+
+
+#inventory_file
+
+# [local:vars]
+# COURSE="DEVOPS WITH AWS"
+# DURATION="156 HRS"
+# LEARNER="DHANUSH"
+# TRAINER="SIVA"
