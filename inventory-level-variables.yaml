@@ -1,4 +1,4 @@
-- name: accessing the variables mentioned as play level
+- name: accessing the variables from inventory file
   hosts: local
   connection: local
   tasks:
