@@ -8,5 +8,5 @@
 
 
 
-
+#command-line
 # ansible-playbook -i inventory.ini -e COURSE="DEVOPS" -e LEARNER="DHANUSH" -e TRAINER="SIVA" -e DURATION="179 hrs"
