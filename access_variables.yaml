@@ -9,20 +9,20 @@
   - file_variables.yaml
 
   vars_prompt:
-  - name: course
-    prompt: enter the course
+   - name: course
+     prompt: enter the course
 
-  - name: learner
-    prompt: enter the learner
+   - name: learner
+     prompt: enter the learner
+  
+  tasks:
+  - name: print the variables
+    vars:
+     course: ansible
+     ansible.builtin.debug:
+      msg: the course is {{ course }} and the learner is {{ learner }}
 
-    tasks:
-     - name: print the variables
-       vars:
-        course: ansible
-       ansible.builtin.debug:
-        msg: the course is {{ course }} and the learner is {{ learner }}
-
-     - name: print the variables
-       ansible.builtin.debug:
-        msg: the course is {{ course }} and the learner is {{ learner }}
+  - name: print the variables
+    ansible.builtin.debug:
+     msg: the course is {{ course }} and the learner is {{ learner }}
      
