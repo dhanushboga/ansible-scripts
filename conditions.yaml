@@ -3,6 +3,7 @@
   connection: local
   vars:
    number: 25
+   number2: 30
   tasks:
   - name: print the value greater than 20
     ansible.builtin.debug:
@@ -13,3 +14,9 @@
     ansible.builtin.debug:
      msg: the {{ number }} is less than or equal 20
     when: number <= 20 
+
+  - name: print the value greater than 20
+    ansible.builtin.debug:
+     msg: the {{ number2 }} is greater than 20
+    when: number2 > 20
+
