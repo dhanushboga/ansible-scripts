@@ -19,8 +19,8 @@
   - name: print the variables
     vars:
      course: ansible
-     ansible.builtin.debug:
-      msg: the course is {{ course }} and the learner is {{ learner }}
+    ansible.builtin.debug:
+     msg: the course is {{ course }} and the learner is {{ learner }}
 
   - name: print the variables
     ansible.builtin.debug:
