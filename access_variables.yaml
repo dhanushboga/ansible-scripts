@@ -1,6 +1,6 @@
 - name: preference of variables
   hosts: local
-  connections: local
+  connection: local
   vars: 
    course: devops
    learner: dhanush
