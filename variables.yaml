@@ -1,10 +1,12 @@
-- name: variables
+- name: accessing the variables mentioned as play level
   hosts: local
-  var:
-      course: "Devops with AWS"
-      learner: Dhanush
+  connection: local
+  vars:
+   COURSE: "The DevSecOps with AWS"
+   DURATION: "150 HRS"
+   TRAINER: "JOIN DevSecOps"
+   LEARNER: "DHANUSH BOGA"
   tasks:
-  - name: print the value
+  - name: print the variables
     ansible.builtin.debug:
-    msg: the "{{ course }}" is leaning by "{{ learner }}"
-    
+     msg: the course is {{ COURSE }} and the Duration is {{ DURATION }} and the Trainer is {{ TRAINER }} and finally the learner is {{ LEARNER }}

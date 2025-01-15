@@ -1,8 +1,0 @@
-- name: accessing the variables from args
-  hosts: local
-  connection: local
-  tasks:
-  - name: prints the sentence
-    ansible.builtin.debug:
-     msg: the course is {{ course }} and the duration is {{ duration }} and the learner is {{ learner }}
-     
