@@ -1,7 +1,7 @@
 - name: accessing the variables by prompt
   hosts: local
   connection: local
-  vars_prompt:
+  vars_prompt:   # accessing the variables from prompts
   - name: COURSE
     prompt: Enter the course name
 
@@ -10,10 +10,11 @@
 
   - name: LEARNER
     prompt: Enter the Learner name
+    private: false
 
   - name: TRAINER
     prompt: Enter the Trainer name
-    private: true
+    private: false
 
   tasks:
   - name: print the variables
