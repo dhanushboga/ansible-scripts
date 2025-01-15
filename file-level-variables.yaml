@@ -1,0 +1,9 @@
+- name: accessing the variables mentioned as play level
+  hosts: local
+  connection: local
+  vars_files:
+  - 
+  tasks:
+  - name: print the variables
+    ansible.builtin.debug:
+     msg: the course is {{ COURSE }} and the Duration is {{ DURATION }} and the Trainer is {{ TRAINER }} and finally the learner is {{ LEARNER }}

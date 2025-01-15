@@ -11,7 +11,7 @@
     vars:                       #task level variables which can override the play level variables
       COURSE: "ANSIBLE AND TERRAFORM"
       DURATION: "130 HRS"
-      learner: siva
+      LEARNER: siva
     ansible.builtin.debug:
       msg: the course is {{ COURSE }} and the duration is {{ DURATION }} and the learner is {{ LEARNER }} and the trainer is {{ TRAINER }}
 
