@@ -16,13 +16,19 @@
      prompt: enter the learner
   
   tasks:
-  - name: print the variables
-    vars:
-     course: ansible
-    ansible.builtin.debug:
-     msg: the course is {{ course }} and the learner is {{ learner }}
+  # - name: print the variables
+  #   vars:
+  #    course: ansible
+  #   ansible.builtin.debug:
+  #    msg: the course is {{ course }} and the learner is {{ learner }}
 
   - name: print the variables
     ansible.builtin.debug:
      msg: the course is {{ course }} and the learner is {{ learner }}
+
+
+
+
+     #command-line variable
+     #task-level-variable
      
