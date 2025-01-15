@@ -11,3 +11,4 @@
      name: nginx
      state: started
 
+# ansible all -i inventory.ini -e anisble_user=ec2-user -e ansible_password=DevOps321 -b -m dnf -a "name=nginx state=installed"
