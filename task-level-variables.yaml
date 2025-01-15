@@ -1,0 +1,23 @@
+- name: Task level variables
+  hosts: local
+  connection: local
+  vars:
+   COURSE: "DevSecOps with AWS"
+   DURATION: "120 HRS"
+   LEARNER: DHANUSHBOGA
+   TRAINER: JOINDEVOPS
+  tasks:
+  - name: accessing the task level variables
+    vars:                       #task level variables which can override the play level variables
+      COURSE: "ANSIBLE AND TERRAFORM"
+      DURATION: "130 HRS"
+      learner: siva
+    ansible.builtin.debug:
+      msg: the course is {{ COURSE }} and the duration is {{ DURATION }} and the learner is {{ LEARNER }} and the trainer is {{ TRAINER }}
+
+  - name: the accessing the variables
+    ansible.builtin.debug:
+     msg: the course is {{ COURSE }} and the duration is {{ DURATION }} and the learner is {{ LEARNER }} and the trainer is {{ TRAINER }}
+ 
+
+

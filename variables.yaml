@@ -1,7 +1,7 @@
 - name: accessing the variables mentioned as play level
   hosts: local
   connection: local
-  vars:
+  vars: #play-level variables
    COURSE: "The DevSecOps with AWS"
    DURATION: "150 HRS"
    TRAINER: "JOIN DevSecOps"
