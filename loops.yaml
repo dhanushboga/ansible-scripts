@@ -1,12 +1,12 @@
 - name: looping the group
   hosts: local
   connection: local
-  loop:
-  - apple
-  - orange
-  - banana
 
   tasks:
   - name: looping the values
+    loop:
+    - apple
+    - orange
+    - banana
     ansible.builtin.debug:
      msg: the loop is {{ item }}
