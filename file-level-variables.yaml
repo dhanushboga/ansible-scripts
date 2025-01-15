@@ -1,8 +1,8 @@
-- name: accessing the variables mentioned as play level
+- name: accessing the variables by different file
   hosts: local
   connection: local
-  vars_files:
-  - 
+  vars_files:  #accessing the variables from file
+  - file_variables.yaml
   tasks:
   - name: print the variables
     ansible.builtin.debug:
