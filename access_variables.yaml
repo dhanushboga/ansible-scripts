@@ -5,8 +5,8 @@
    course: devops
    learner: dhanush
 
-  vars_files:
-  - file_variables.yaml
+  # vars_files:
+  # - file_variables.yaml
 
   vars_prompt:
    - name: course
@@ -31,4 +31,6 @@
 
      #command-line variable
      #task-level-variable
+     #file-level-varibles
+
      
