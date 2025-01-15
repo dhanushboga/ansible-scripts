@@ -1,0 +1,15 @@
+- name: print task greater than 20
+  hosts: local
+  connection: local
+  vars:
+   number: 25
+  tasks:
+  - name: print the value greater than 20
+    ansible.builtin.debug:
+     msg: the {{ number }} is greater than 20
+    when: number > 20
+
+  - name: print the value less than 20
+    ansible.builtin.debug:
+     msg: the {{ number }} is less than or equal 20
+    when: number <= 20 
