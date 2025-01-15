@@ -1,26 +1,26 @@
 - name: preference of variables
   hosts: local
   connection: local
-  # vars: 
-  #  course: devops
-  #  learner: dhanush
+  vars: 
+   course: devops
+   learner: dhanush
 
-  # vars_files:
-  # - file_variables.yaml
+  vars_files:
+  - file_variables.yaml
 
-  # vars_prompt:
-  #  - name: course
-  #    prompt: enter the course
+  vars_prompt:
+   - name: course
+     prompt: enter the course
 
-  #  - name: learner
-  #    prompt: enter the learner
+   - name: learner
+     prompt: enter the learner
   
   tasks:
-  # - name: print the variables
-  #   vars:
-  #    course: ansible
-  #   ansible.builtin.debug:
-  #    msg: the course is {{ course }} and the learner is {{ learner }}
+  - name: print the variables
+    vars:
+     course: ansible
+    ansible.builtin.debug:
+     msg: the course is {{ course }} and the learner is {{ learner }}
 
   - name: print the variables
     ansible.builtin.debug:
@@ -34,6 +34,7 @@
      #file-level-varibles
      #prompt-variables
      #play-level-variables
+     #inventory-level-variables
 
 
 
