@@ -1,0 +1,21 @@
+- name: accessing the variables by prompt
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: COURSE
+    prompt: Enter the course name
+
+  - name: DURATION
+    prompt: Enter the Duration
+
+  - name: LEARNER
+    prompt: Enter the Learner name
+
+  - name: TRAINER
+    prompt: Enter the Trainer name
+    private: true
+
+  tasks:
+  - name: print the variables
+    ansible.builtin.debug:
+     msg: the course is {{ COURSE }} and the Duration is {{ DURATION }} and the Trainer is {{ TRAINER }} and finally the learner is {{ LEARNER }}
