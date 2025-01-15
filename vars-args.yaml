@@ -1,0 +1,12 @@
+- name: accessing the variables given as args through command line
+  hosts: local
+  connection: local
+  tasks:
+  - name: print the variables
+    ansible.builtin.debug:
+     msg: the course is {{ COURSE }} and the Duration is {{ DURATION }} and the Trainer is {{ TRAINER }} and finally the learner is {{ LEARNER }}
+
+
+
+
+# ansible-playbook -i inventory.ini -e COURSE="DEVOPS" -e LEARNER="DHANUSH" -e TRAINER="SIVA" -e DURATION="179 hrs"
