@@ -1,9 +1,9 @@
 - name: preference of variables
   hosts: local
   connection: local
-  vars: 
-   course: devops
-   learner: dhanush
+  # vars: 
+  #  course: devops
+  #  learner: dhanush
 
   # vars_files:
   # - file_variables.yaml
@@ -33,6 +33,8 @@
      #task-level-variable
      #file-level-varibles
      #prompt-variables
+     #play-level-variables
+
 
 
      
