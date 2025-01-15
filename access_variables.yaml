@@ -8,12 +8,12 @@
   # vars_files:
   # - file_variables.yaml
 
-  vars_prompt:
-   - name: course
-     prompt: enter the course
+  # vars_prompt:
+  #  - name: course
+  #    prompt: enter the course
 
-   - name: learner
-     prompt: enter the learner
+  #  - name: learner
+  #    prompt: enter the learner
   
   tasks:
   # - name: print the variables
@@ -32,5 +32,7 @@
      #command-line variable
      #task-level-variable
      #file-level-varibles
+     #prompt-variables
+
 
      
