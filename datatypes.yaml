@@ -4,15 +4,24 @@
   vars:
    course: devops
    duration: "125 hrs"
+
+   #list
    topics:
    - shell scripting
    - ansible
    - jenkins
+   #list
+
+   #boolean
    live: true
+   #boolean
+   
+   # map
    tools:
     ci: jenkins
     infra: terraform
     container: docker
+  # map
   
   tasks:
   - name: print the values in the datatypes
