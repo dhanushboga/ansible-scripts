@@ -4,4 +4,4 @@
   tasks:
   - name: handling undefined varaibles
     ansible.builtin.debug:
-     msg: hello {{ person }} how are you?
+     msg: hello {{ person | default('dhanush')}} how are you?
