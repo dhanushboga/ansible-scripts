@@ -9,4 +9,4 @@
     - orange
     - banana
     ansible.builtin.debug:
-     msg: the loop is {{ item }}
+     msg: the fruit is {{ item }}
