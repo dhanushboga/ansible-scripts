@@ -1,0 +1,7 @@
+- name: install the packages
+  hosts: local
+  connection: local
+  tasks:
+  - name: handling undefined varaibles
+    ansible.builtin.debug:
+     msg: hello {{ person }} how are you?
