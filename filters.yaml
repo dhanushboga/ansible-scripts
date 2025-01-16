@@ -21,3 +21,15 @@
        trainer: "siva"
     ansible.builtin.debug:
      msg: the persons are {{ course | dict2items }}
+
+  - name: convert to lower case
+    vars:
+     name: "DHANUSH"
+     ansible.builtin.debug:
+      msg: the persons are {{ name | lower }}
+
+  - name: convert to upper case
+    vars:
+     name: "dhanush"
+    ansible.builtin.debug:
+     msg: the persons are {{ name | upper }}
