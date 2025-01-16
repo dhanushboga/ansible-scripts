@@ -11,4 +11,13 @@
      persons: "dhanush,suresh,siva"
     ansible.builtin.debug:
      msg: the persons are {{ persons | split(',')}}
-     
+
+
+  - name: convert dict to list
+    vars:
+     course:
+       name: "ansible"
+       duartion: 120
+       trainer: "siva"
+    ansible.builtin.debug:
+     msg: the persons are {{ persons | dict2item }}
