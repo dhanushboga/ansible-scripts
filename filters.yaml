@@ -20,4 +20,4 @@
        duartion: 120
        trainer: "siva"
     ansible.builtin.debug:
-     msg: the persons are {{ persons | dict2items }}
+     msg: the persons are {{ course | dict2items }}
