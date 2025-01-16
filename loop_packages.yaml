@@ -1,12 +1,27 @@
+# - name: install the packages
+#   hosts: web
+#   become: yes
+#   tasks:
+#   - name: installin the various packages
+#     ansible.builtin.package:
+#      name: "{{ item }}"
+#      state: installed
+#     loop:
+#     - git
+#     - mysql-server
+#     - zip
+
+
+
 - name: install the packages
   hosts: web
   become: yes
   tasks:
   - name: installin the various packages
     ansible.builtin.package:
-     name: "{{ item }}"
-     state: installed
+     name: "{{ item.name }}"
+     state: "{{item.state }}"
     loop:
-    - git
-    - mysql-server
-    - zip
+    - {name:"git",state:'present'}
+    - {name:"mysql-server", state:'absent'}
+    - {name:"zip", state:'present'}
