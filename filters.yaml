@@ -4,4 +4,11 @@
   tasks:
   - name: handling undefined varaibles
     ansible.builtin.debug:
-     msg: hello {{ person | default('dhanush')}} how are you?
+     msg: hello {{ person | default('dhanush')}} how are you?     #giving default value using piping
+
+  - name: convert string to list
+    vars:
+     persons: "dhanush,suresh,siva"
+    ansible.builtin.debug:
+     msg: the persons are {{ persons | split(',')}}
+     
