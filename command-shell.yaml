@@ -8,4 +8,4 @@
   
   - name: store the result
     ansible.builtin.debug:
-     msg: {{ result }}
+     msg: "{{ result }}"
