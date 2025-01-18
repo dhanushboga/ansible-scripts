@@ -1,6 +1,7 @@
 - name: install the packages
   hosts: local
   connection: local
+  become: yes
   vars_prompt:
     - name: IP
       prompt: Enter the IP address
