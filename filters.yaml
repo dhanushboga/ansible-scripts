@@ -1,6 +1,10 @@
 - name: install the packages
   hosts: local
   connection: local
+  vars_prompt:
+    - name: IP
+      prompt: Enter the IP address
+      private: false
   tasks:
   - name: handling undefined varaibles
     ansible.builtin.debug:
@@ -41,9 +45,5 @@
       msg: "min is {{ numbers | min }} max is {{ numbers | max }}"
     
   - name: check whether IP is valid or not
-    vars_prompt:
-    - name: IP
-      prompt: Enter the IP address
-      private: false
     ansible.builtin.debug:
      msg: "{{ IP | ansible.builtin.ipaddr }}"
