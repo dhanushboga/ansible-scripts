@@ -1,0 +1,8 @@
+- name: create new user
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: create the new user
+    ansible.builtin.user:
+     name: expense
