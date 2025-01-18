@@ -1,0 +1,11 @@
+- name: command and shell
+  hosts: local
+  connection: local
+  tasks:
+  - name: run the command module
+    ansible.builtin.command: ls -ltr 
+    register: result
+  
+  - name: store the result
+    ansible.builtin.debug:
+     msg: {{ result }}
