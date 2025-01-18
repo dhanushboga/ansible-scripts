@@ -3,7 +3,8 @@
   connection: local
   tasks:
   - name: run the command module
-    ansible.builtin.command: ls -ltr 
+    #ansible.builtin.command: ls -ltr 
+    ansible.builtin.shell: ls -ltr 
     register: result
   
   - name: store the result
