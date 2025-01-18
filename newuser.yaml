@@ -6,3 +6,4 @@
   - name: create the new user
     ansible.builtin.user:
      name: expense
+     remove: yes
