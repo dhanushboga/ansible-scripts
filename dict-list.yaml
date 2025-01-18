@@ -9,4 +9,4 @@
   tasks:
   - name: convert the map to dict
     ansible.builtin.debug:
-     msg: the dict is {{ map | map2dict }}
+     msg: the dict is {{ map | dict2items }}
