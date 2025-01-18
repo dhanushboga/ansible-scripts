@@ -43,7 +43,7 @@
   - name: check whether IP is valid or not
     vars_prompt:
     - name: IP
-      prompt: "Enter the IP address:"
+      prompt: Enter the IP address
       private: false
     ansible.builtin.debug:
      msg: "{{ IP | ansible.builtin.ipaddr }}"
