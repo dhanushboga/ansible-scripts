@@ -1,0 +1,12 @@
+- name: convert map to dict
+  hosts: local
+  connection: local
+  vars:
+   map: 
+    course: devops
+    duration: 120hrs
+    learner: dhanush
+  tasks:
+  - name: convert the map to dict
+    ansible.builtin.debug:
+     msg: the dict is {{ map | map2dict }}
