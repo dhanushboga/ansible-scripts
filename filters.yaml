@@ -6,6 +6,10 @@
       prompt: Enter the IP address
       private: false
   tasks:
+  - name: install the python libs
+    ansible.builtin.pip:
+     name: netaddr
+
   - name: handling undefined varaibles
     ansible.builtin.debug:
      msg: hello {{ person | default('dhanush')}} how are you?     #giving default value using piping
