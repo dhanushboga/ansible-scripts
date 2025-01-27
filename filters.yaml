@@ -38,6 +38,8 @@
       msg: the persons are {{ name | lower }}
 
   - name: convert to upper case
+    tags:
+    - lowertoupper
     vars:
      name: "dhanush"
     ansible.builtin.debug:
