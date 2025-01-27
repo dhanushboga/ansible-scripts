@@ -2,10 +2,10 @@
   hosts: local
   connection: local
   become: yes
-  vars_prompt:
-    - name: IP
-      prompt: Enter the IP address
-      private: false
+  # vars_prompt:
+  #   - name: IP
+  #     prompt: Enter the IP address
+  #     private: false
   tasks:
   - name: install the python libs
     ansible.builtin.pip:
